@@ -1,0 +1,31 @@
+{
+  "entities": {
+    "UserCollection": {
+      "title": "User Collection",
+      "description": "User specific data collection stored in cloud Firestore",
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "description": "An array of items in this collection"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of the last update"
+        }
+      },
+      "required": ["updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/{collectionName}/{docId}": {
+      "schema": "UserCollection",
+      "description": "User-owned isolated business data records and documents in Firestore"
+    },
+    "/users_data/{userId}/collections/{collectionId}": {
+      "schema": "UserCollection",
+      "description": "Synchronized user storage collections for legacy replication"
+    }
+  }
+}

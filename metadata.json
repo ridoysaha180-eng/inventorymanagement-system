@@ -1,0 +1,10 @@
+{
+  "name": "BizFlow",
+  "description": "A comprehensive business management platform for inventory, POS sales, customers, suppliers, expenses, and full due management.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
